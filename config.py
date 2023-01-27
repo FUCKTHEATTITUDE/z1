@@ -1,7 +1,7 @@
 
 import os
 class Config(object):
-    BOT_TOKEN = os.environ.get('BOT_TOKEN')
+    BOT_TOKEN = os.environ.get('BOT_TOKEN',"5515531668:AAE2xPFETz4CcABZ2aJAQzG6xzO2fzYAoeE")
     SCHEDULE = os.environ.get('SCHEDULE', False)
     USERID = os.environ.get('USERID')
     PATH = os.environ.get('PATH', "/usr/local/bin:/usr/bin:/bin:/app/vendor/firefox")
