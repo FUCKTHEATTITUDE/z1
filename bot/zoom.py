@@ -21,17 +21,17 @@ userId = Config.USERID
 def joinZoom(context, url_meet, passStr):
 
     def students(context):
-        print("Running Student Check")
+        print("ZOOM PROTOCAL Check")
 
         browser.find_element_by_xpath('//*[@id="wc-container-left"]/div[4]/div/div/div/div[1]').click()
         number = WebDriverWait(browser, 2400).until(EC.presence_of_element_located((By.XPATH, '//*[@id="wc-footer"]/div/div[2]/button[1]/div/div/span'))).text
         print(number)
         if(int(number) <10):
-            context.bot.send_message(chat_id=userId, text="Your Class has ended!")
+            context.bot.send_message(chat_id=userId, text="Your session ended!")
             browser.quit()
             execl(executable, executable, "chromium.py")
     try:
-        name = "Vansh Santoshi"
+        name = "sid"
         browser.get('https://zoom.us')
         browser.get('https://zoom.us/wc/join/'+ url_meet)
         WebDriverWait(browser, 10).until(EC.visibility_of_element_located((By.CSS_SELECTOR, "#inputname"))).click()
